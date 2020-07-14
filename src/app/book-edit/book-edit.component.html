@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>Cập nhật sách</h3>
+  <p style="color: blue" *ngIf="message">{{message}}</p>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <input type="hidden" value="{{book.id}}">
+    <table>
+      <tr>
+        <td style="width: 100px">Tên </td>
+        <td colspan="2"><input style="width: 300px" type="text" formControlName="title"></td>
+      </tr>
+      <tr>
+        <td>Tác giả </td>
+        <td colspan="2"><input style="width: 300px" type="text" formControlName="author"></td>
+      </tr>
+      <tr>
+        <td>Mô tả </td>
+        <td colspan="2"><textarea cols="39" rows="8" formControlName="description"></textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button class="btn btn-outline-dark" type="submit">Cập nhật</button></td>
+        <td><a class="btn btn-outline-dark" routerLink="/">Thoát</a></td>
+      </tr>
+    </table>
+  </form>
+</div>

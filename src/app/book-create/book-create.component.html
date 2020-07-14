@@ -1,0 +1,26 @@
+<div class="container">
+<h3>Thêm sách mới</h3>
+<p style="color: blue" *ngIf="message">{{message}}</p>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td style="width: 100px">Tên </td>
+      <td colspan="2"><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Tác giả </td>
+      <td colspan="2"><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Mô tả </td>
+      <td colspan="2"><textarea cols="23" rows="3" formControlName="description"></textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button class="btn btn-outline-dark" type="submit">Thêm sách</button></td>
+      <td><a class="btn btn-outline-dark" routerLink="/">Thoát</a></td>
+    </tr>
+  </table>
+  </form>
+</div>

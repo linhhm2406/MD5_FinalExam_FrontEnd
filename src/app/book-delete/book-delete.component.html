@@ -1,0 +1,16 @@
+<div class="container" >
+  <p style="color:red;" *ngIf="message">{{message}}</p>
+  <div style="margin-top: 20px">
+    <h3 style="float: left; margin-bottom: 20px">Chi tiết sách</h3>
+  </div>
+  <div style="clear: both">
+    Tên sách &nbsp;: &nbsp;{{book.title}}<br><br>
+    Tác giả &nbsp;: &nbsp;{{book.author}}<br><br>
+    Mô tả &nbsp;:<br>{{book.description}}
+  </div>
+  <br>
+  <div>
+    <a class="btn btn-outline-danger" (click)="onDelete(book.id)">Xóa sách</a> &nbsp;
+    <a class="btn btn-outline-success" routerLink="/">Thoát</a>
+  </div>
+</div>

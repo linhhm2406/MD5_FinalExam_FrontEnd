@@ -1,0 +1,11 @@
+a {
+  color: black !important;
+}
+
+table, tr, td, th {
+  border: 1px solid grey !important;
+}
+
+th {
+  text-align: center;
+}

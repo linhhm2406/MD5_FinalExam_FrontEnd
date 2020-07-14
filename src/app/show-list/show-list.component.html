@@ -1,0 +1,19 @@
+<div class="container">
+<h3>Danh sách các cuốn sách</h3><br>
+  <p style="float:left;;"><b> Có {{bookList.length}} cuốn sách</b></p>
+  <a class="btn btn-primary" style="float: right; margin-bottom: 10px" routerLink="/book/create">Thêm sách mới</a>
+  <table class="table table-bordered">
+    <tr style="background-color: lightgoldenrodyellow">
+      <th style="width: 80px; text-align: center">#</th>
+      <th>Tên sách</th>
+      <th>Tác giả</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let book of bookList">
+      <td style="width: 80px; text-align: center">{{book.id}}</td>
+      <td><a routerLink="/book/detail/{{book.id}}">{{book.title}}</a></td>
+      <td>{{book.author}}</td>
+      <td style="text-align: center"><a class="btn btn-danger" routerLink="/book/delete/{{book.id}}">Xóa</a> | <a class="btn btn-success" routerLink="/book/edit/{{book.id}}">Sửa</a></td>
+    </tr>
+  </table>
+</div>
